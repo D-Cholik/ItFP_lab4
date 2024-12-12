@@ -32,6 +32,7 @@
         (setf result (append (nreverse sorted) (list element) remaining))))))
 ```
 ### Тестові набори та утиліти першої частини
+```lisp
 (defun check-insertion-sort (name input expected &key (key #'identity) (test #'<))
   (format t "~:[FAILED~;passed~]... ~a~%"
           (equal (insertion-sort input :key key :test test) expected)
